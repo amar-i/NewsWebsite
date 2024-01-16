@@ -3,9 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css">
     <title>News Website</title>
   </head>
+  <header>
+    <div class="slider">
+      <div class="slides">
+        <!--Radio Buttons-->
+        <input type="radio" name="radio-btn" id="radio1" />
+
+        <input type="radio" name="radio-btn" id="radio2" />
+
+        <input type="radio" name="radio-btn" id="radio3" />
+        <!--Fim Radio Buttons-->
+
+        <!--Slides em imagens-->
+        <div class="slide first">
+          <img src="images/placeholder1.webp" alt="img1" width="1200px"/>
+        </div>
+        <div class="slide">
+          <img src="images/palceholder2.jpg" alt="img2" />
+        </div>
+        <div class="slide">
+          <img src="images/placeholder3.gif" alt="img3" />
+        </div>
+        <!--Fim Slides em imagens-->
+
+        <!--Bolinhas de navegação-->
+        <div class="navegacao-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+        </div>
+      </div>
+
+      <div class="manual-navegacao">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+      </div>
+    </div>
+  </header>
   <body>
-    <h1>News Website</h1>
+    <script>
+        let count =1;
+  document.getElementById("radio1").checked = true;
+
+  setInterval(function(){
+      nextImage();
+  }, 5000
+
+  )
+
+  function nextImage(){
+      count++;
+      if (count>4) {
+          count = 1;
+      }
+      document.getElementById("radio"+count).checked = true;
+  }
+    </script>
   </body>
 </html>
