@@ -1,105 +1,101 @@
-body{
 
-    margin: 0;
+html {
+	box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+	box-sizing: inherit;
+  }
+
+body {
+	margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
-.slider{
-    width: 800px;
-	height: 400px;
-	overflow: hidden;
+header {
+	padding: 0;
+	margin: 0;
 }
-
-.slides{
-	width: 400%;
-	height: 400px;
-	display: flex;
-}
-
-.slides input {
-	display: none;
-}
-
-.slide{
+.carousel{
+	position:relative;
+	padding: 0;
+	margin: 0;
+  }
+  
+  .carousel-item{
 	width: 100%;
-	position: relative;
-	transition: 5s;
+	height:300px;
+	display:none;
+	&.item-selected{
+	  display:block;
+	}
+  }
+
+
+.carousel-item img {
+    width: 100%; /* Make the image take the full width of the item */
+    height: 350px; /* Fixed height to match the item */
+    object-fit: cover; /* This will cover the area without distorting the image */
+    /* If you want to maintain the aspect ratio, you might use 'object-fit: contain;' instead */
 }
 
-.slide img {
+.carousel h1 {
+    position: absolute;
+    top: 10px;
+    left: 20px; 
+    z-index: 10;
+    color: white;
+}
+  
+  .carousel-nav{
+	width:100%;
+	padding: 0px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	text-align:center;
+  }
+  .carousel-button {
+	width:10px;
+	height:10px;
+	bottom: 2px;
+	
+	display:inline-block;
+	/*allow us to give a height to the object*/
+	
+	background:rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	margin: 0 5px;
+  /*   adds a cursor change to read it as a button */
+	cursor:pointer;
+	
+	&.button-selected {
+	background:rgba(255, 255, 255, 0.8); 
+	}
+  }
+
+  .menu-wrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2; /* Set a higher z-index value */
+	/* Add any other styles you want for positioning and styling */
+  }
+
+  li {
+	list-style: none;
+  }
+  a {
+	text-decoration: none;
+  }
+  img {
 	width: 100%;
-}
-
-.manual-navegacao{
-	position: absolute;
-	width: 800px;
-	margin-top: -80px;
-	display: flex;
-	justify-content: center;
-}
-
-.manual-btn{
-	border: 2px solid #fff;
-	padding: 5px;
-	border-radius: 10px;
-	cursor: pointer;
-	transition: 1s;
-}
-
-.manual-btn:not(:last-child){
-	margin-right: 30px;
-}
-
-.manual-btn:hover{
-	background-color: #fff;
-}
-
-#radio1:checked ~ .first{
-	margin-left: 0;
-}
-
-#radio2:checked ~ .first{
-	margin-left: -25%;
-}
-
-#radio3:checked ~ .first{
-	margin-left: -50%;
-}
-
-.navegacao-auto div{
-	border: 2px solid #20acff;
-	padding: 5px;
-	border-radius: 10px;
-	cursor: pointer;
-	transition: 1s;
-}
-
-.navegacao-auto{
-	position: absolute;
-	width: 800px;
-	margin-top: 320px;
-	display: flex;
-	justify-content: center;
-}
-
-.navegacao-auto div:not(:last-child){
-	margin-right: 30px;
-}
-
-#radio1:checked ~ .navegacao-auto .auto-btn1{
-	background-color: #fff;
-}
-
-#radio2:checked ~ .navegacao-auto .auto-btn2{
-	background-color: #fff;
-}
-
-#radio3:checked ~ .navegacao-auto .auto-btn3{
-	background-color: #fff;
-}
+	height: auto;
+  }
+  .bx {
+	font-size: 2.5rem;
+  }
+  .container {
+	padding: 0 2rem;
+  }
