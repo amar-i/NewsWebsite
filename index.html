@@ -8,20 +8,21 @@
   </head>
   <body>
     <header>
-      <div class="company-logo">D</div>
-      <nav class="navbar">
-        <ul class="nav-items">
-          <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">OFFER</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">SHOP</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
-        </ul>
-      </nav>
-      <div class="menu-toggle">
-        <i class="bx bx-menu"></i>
-        <i class="bx bx-x"></i>
-      </div>
       <div class="carousel">
+        <nav class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Josh's Story</a></li>
+            <li><a href="#">Nigel's Story</a></li>
+            <li><a href="#">Kai's Story</a></li>
+            <li><a href="#">Jashan's Story</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger">
+          <span class="hamburg-line"></span>
+          <span class="hamburg-line"></span>
+          <span class="hamburg-line"></span>
+        </button>
         <div class="carousel-item">
           <img src="./images/placeholder1.webp" alt="article1" />
         </div>
@@ -31,12 +32,9 @@
         <div class="carousel-item">
           <img src="./images/placeholder3.gif" alt="article3" />
         </div>
-
-        <!--   we are going to create the navigation with JS 
-      <div class="carousel-nav">
-         <span class="carousel-button"></span>
-         <span class="carousel-button button-selected"></span>
-         <span class="carousel-button"></span> -->
+        <div class="carousel-item">
+          <img src="./images/palceholder2.jpg" alt="article4" />
+        </div>
       </div>
     </header>
     <main>
@@ -55,7 +53,7 @@
               <p>Author</p>
               <p>Story description</p>
             </div>
-          </article>
+          </article !important;e>
         </div>
         <div class="article-container">
           <article class="main-article a2">
@@ -198,5 +196,19 @@ ${buttonsHtml.join("")}
       items[0].classList.add("item-selected");
       buttons[0].classList.add("button-selected");
     });
+
+    const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
+
+hamburger.addEventListener('click', (event) => {
+    event.preventDefault();  // Prevent default action
+    toggleClasses();
+});
+
+function toggleClasses() {
+    hamburger.classList.toggle('open');
+    menu.classList.toggle('open');
+}
+
   </script>
 </html>
