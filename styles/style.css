@@ -253,7 +253,7 @@ img {
 
   .sub-article.s4 {
     grid-row-start: 9;
-  } */
+  }
 }
 
 /* Tablet Landscape */
@@ -276,13 +276,11 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 50px;
   }
 
   .container {
     margin: 0 auto;
-    padding-left: 5%;
-    padding-right: 10%;
+    padding: 0 5%;
   }
 }
 
@@ -308,7 +306,6 @@ img {
   .container {
     display: flex;
     flex-direction: column;
-    justify-
     align-items: flex-start;
     width: 100%;
     background: black;
