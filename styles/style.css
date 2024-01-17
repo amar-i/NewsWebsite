@@ -379,7 +379,7 @@ width: 20vw;
 .hamburger {
   background-color: #fff;
   border-radius: 50%;
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   border: 0;

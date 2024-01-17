@@ -8,11 +8,6 @@
   </head>
   <body>
     <header>
-      <div class="company-logo">D</div>
-      <div class="menu-toggle">
-        <i class="bx bx-menu"></i>
-        <i class="bx bx-x"></i>
-      </div>
       <div class="carousel">
         <nav class="menu">
           <ul>
@@ -208,69 +203,6 @@
         </section>
       </div>
     </main>
+    <script src="scripts/script.js"></script>
   </body>
-  <script>
-    // first we select everything in the doc that has the class carousel. so if we have multiple carousels all will follow the same logic
-    //the tutorial uses "carousel" instead of "element", but to emphasize that it has nothing to do with the class name we are using element here. But carousel would be a better fit for a larger code.
-
-    document.querySelectorAll(".carousel").forEach((element) => {
-      const items = element.querySelectorAll(".carousel-item");
-
-      // we generate the html for the navigation. By passing item through buttons it will generate as many buttons as items in the array
-
-      const buttonsHtml = Array.from(items, () => {
-        return `<span class="carousel-button"></span>`;
-        // we are using backquotes `` so we can use double quotes"" inside the string for the class name
-      });
-
-      // now we insert the buttons
-      element.insertAdjacentHTML(
-        "beforeend",
-        `
-<div class="carousel-nav"> 
-${buttonsHtml.join("")}
-</div>
-`
-      );
-
-      //   we are going to select the buttons
-
-      const buttons = element.querySelectorAll(".carousel-button");
-      //here we are getting the list of all the buttons we've created in the previous step
-
-      //   we are iterating through each button and through each index (i) of the array
-      buttons.forEach((button, i) => {
-        button.addEventListener("click", () => {
-          // un-select all the items. we select the item list we created at the beggining
-          // I don't call the class with "".class" because i'm telling it already the object is going to be a class.
-          items.forEach((item) => item.classList.remove("item-selected"));
-          buttons.forEach((button) =>
-            button.classList.remove("button-selected")
-          );
-
-          //now we select the correct one depending on its index
-          items[i].classList.add("item-selected");
-          button.classList.add("button-selected");
-        });
-      });
-
-      //   this stablishes the first state of the carousel. Selects the first item on page load.
-      items[0].classList.add("item-selected");
-      buttons[0].classList.add("button-selected");
-    });
-
-    const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('.menu');
-
-hamburger.addEventListener('click', (event) => {
-    event.preventDefault();  // Prevent default action
-    toggleClasses();
-});
-
-function toggleClasses() {
-    hamburger.classList.toggle('open');
-    menu.classList.toggle('open');
-}
-
-  </script>
 </html>
