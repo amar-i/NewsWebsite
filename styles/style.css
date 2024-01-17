@@ -147,21 +147,21 @@ a {
 /* ------ End of Header ------ */
 
 /* ------ Bottom nav bar ------ */
-.navbar {
+.bottom-nav {
   padding: 10px;
 }
 
-.navbar ul {
+.bottom-nav ul {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
 }
 
-.navbar ul li {
+.bottom-nav ul li {
   margin: 0;
 }
 
-.navbar ul li a {
+.bottom-nav ul li a {
   text-decoration: none;
   padding: 5px;
   line-height: 2rem;
@@ -170,7 +170,7 @@ a {
   color: black;
 }
 
-.navbar ul li a:hover,
+.bottom-nav ul li a:hover,
 .active {
   background-color: black;
   color: white;
@@ -431,6 +431,10 @@ img {
 
 .menu li:nth-of-type(5) {
   transition-delay: 0.1s;
+}
+
+.menu li:nth-of-type(6) {
+  transition-delay: 0.15s;
 }
 
 .menu.open li {
