@@ -12,15 +12,6 @@ html {
   grid-template-columns: 3fr 1fr;
 }
 
-main {
-  margin: 0 10%;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-}
-
 .main-article {
   display: grid;
   grid-template-columns: 1fr 1fr;
