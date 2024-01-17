@@ -283,7 +283,7 @@ img {
 
 /* Hide the navbar at 1550px and below */
 @media (max-width: 1550px) {
-  .navbar {
+  .bottom-nav {
     display: none;
   }
 }
