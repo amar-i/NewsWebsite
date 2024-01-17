@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css">
+    <title>News Website</title>
+  </head>
+  <header>
+    <!-- <div class="company-logo">D</div>
+    <nav class="navbar">
+      <ul class="nav-items">
+        <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">OFFER</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">SHOP</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="bx bx-menu"></i>
+      <i class="bx bx-x"></i>
+    </div> -->
+    <div class="carousel">
+      <div class="carousel-item">
+        <img src="images/placeholder1.webp" alt="article1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/palceholder2.jpg" alt="article2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/placeholder3.gif" alt="article3">
+      </div>
+      
+    <!--   we are going to create the navigation with JS 
+    <div class="carousel-nav">
+       <span class="carousel-button"></span>
+       <span class="carousel-button button-selected"></span>
+       <span class="carousel-button"></span> -->
+      
+      </div>
+    </div>
+  </header>
+  <body>
+    <script>
+      // first we select everything in the doc that has the class carousel. so if we have multiple carousels all will follow the same logic
+//the tutorial uses "carousel" instead of "element", but to emphasize that it has nothing to do with the class name we are using element here. But carousel would be a better fit for a larger code.
+
+document.querySelectorAll(".carousel").forEach(element => {
+ 
+ const items =element.querySelectorAll(".carousel-item");
+ 
+ // we generate the html for the navigation. By passing item through buttons it will generate as many buttons as items in the array
+ 
+ const buttonsHtml = Array.from(items, () => {
+   
+   return `<span class="carousel-button"></span>`;
+   // we are using backquotes `` so we can use double quotes"" inside the string for the class name
+ });
+ 
+ // now we insert the buttons
+ element.insertAdjacentHTML( 'beforeend', `
+ <div class="carousel-nav"> 
+ ${ buttonsHtml.join("") }
+ </div>
+ `);
+
+ 
+//   we are going to select the buttons
+ 
+ const buttons = element.querySelectorAll(".carousel-button");
+ //here we are getting the list of all the buttons we've created in the previous step
+ 
+ 
+//   we are iterating through each button and through each index (i) of the array
+ buttons.forEach((button, i) => {
+   button.addEventListener("click", () => {
+// un-select all the items. we select the item list we created at the beggining
+// I don't call the class with "".class" because i'm telling it already the object is going to be a class.
+     items.forEach(item => item.classList.remove("item-selected"));
+     buttons.forEach(button => button.classList.remove("button-selected"));
+
+//now we select the correct one depending on its index
+     items[i].classList.add("item-selected");
+     button.classList.add("button-selected");
+   });
+ });
+ 
+//   this stablishes the first state of the carousel. Selects the first item on page load.
+     items[0].classList.add("item-selected");
+     buttons[0].classList.add("button-selected");
+}); 
+    </script>
+  </body>
+</html>
