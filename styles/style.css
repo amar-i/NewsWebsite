@@ -99,6 +99,46 @@ a {
   font-size: 2.5rem;
 }
 
+/* Bottom menu bar */
+.navbar {
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul li {
+  margin: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  padding: 5px;
+  line-height: 2rem;
+  font-weight: 700;
+  font-size: 25px;
+  color: black;
+}
+
+.navbar ul li a:hover,
+.active {
+  background-color: black;
+  color: white;
+  transition: color 0.5s ease;
+  border-radius: 5px;
+}
+
+/* Media query to hide the navbar below 1200px */
+@media (max-width: 1200px) {
+  .navbar {
+    display: none;
+  }
+}
+/* End of bottom menu bar */
+
 main {
   margin: 0 10%;
   padding: 0;
