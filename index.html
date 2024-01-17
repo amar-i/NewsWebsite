@@ -14,6 +14,20 @@
         <i class="bx bx-x"></i>
       </div>
       <div class="carousel">
+        <nav class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Josh's Story</a></li>
+            <li><a href="#">Nigel's Story</a></li>
+            <li><a href="#">Kai's Story</a></li>
+            <li><a href="#">Jashan's Story</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger">
+          <span class="hamburg-line"></span>
+          <span class="hamburg-line"></span>
+          <span class="hamburg-line"></span>
+        </button>
         <div class="carousel-item">
           <img src="./images/placeholder1.webp" alt="article1" />
         </div>
@@ -22,6 +36,9 @@
         </div>
         <div class="carousel-item">
           <img src="./images/placeholder3.gif" alt="article3" />
+        </div>
+        <div class="carousel-item">
+          <img src="./images/palceholder2.jpg" alt="article4" />
         </div>
       </div>
     </header>
@@ -148,6 +165,10 @@
               </p>
             </div>
           </article>
+        </div>
+        <div class="article-container">
+          <article class="main-article a2">
+          </article>
           <article class="sub-article s2">
             <div class="line"></div>
             <img
@@ -237,5 +258,19 @@ ${buttonsHtml.join("")}
       items[0].classList.add("item-selected");
       buttons[0].classList.add("button-selected");
     });
+
+    const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
+
+hamburger.addEventListener('click', (event) => {
+    event.preventDefault();  // Prevent default action
+    toggleClasses();
+});
+
+function toggleClasses() {
+    hamburger.classList.toggle('open');
+    menu.classList.toggle('open');
+}
+
   </script>
 </html>
