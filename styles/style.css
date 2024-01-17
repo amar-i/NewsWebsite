@@ -280,7 +280,7 @@ img {
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-
     align-items: flex-start;
     width: 100%;
     background: black;
