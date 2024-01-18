@@ -221,6 +221,13 @@ img {
     margin-bottom: 0.3em;
   }
 
+  footer {
+    background-color: #000;
+    text-align: right;
+    padding: 1rem;
+    color: rgb(136, 136, 136);
+  }
+
   .author {
     font-size: 0.8rem;
     color: #6653ff;
@@ -248,7 +255,6 @@ img {
   }
 
   .main-article .description {
-    width: 50%;
     font-size: 1rem;
   }
 
@@ -310,7 +316,6 @@ img {
 
   .main-article img {
     width: 50%;
-    height: 290px;
     object-fit: cover;
   }
 
@@ -351,6 +356,10 @@ img {
     flex-direction: row;
     width: 100%;
     gap: 2.5rem;
+  }
+
+  footer {
+    background-color: white;
   }
 
   .articles .sub {
