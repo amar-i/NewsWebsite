@@ -19,6 +19,20 @@ function handleButtonClick(items, buttons, i) {
   buttons[i].classList.add("button-selected");
 }
 
+// Function to toggle visibility of headings and authors
+function toggleHeadingVisibility() {
+  const headings = document.querySelectorAll(".heading");
+  const authors = document.querySelectorAll(".heading-author");
+  
+  headings.forEach((heading) => {
+    heading.classList.toggle("text-visible");
+  });
+  
+  authors.forEach((author) => {
+    author.classList.toggle("text-visible");
+  });
+}
+
 document.querySelectorAll(".carousel").forEach((element) => {
   const items = element.querySelectorAll(".carousel-item");
   let navContainer = null;
@@ -54,6 +68,7 @@ document.querySelectorAll(".carousel").forEach((element) => {
   hamburger.addEventListener('click', (event) => {
     event.preventDefault();
     toggleClasses();
+    toggleHeadingVisibility(); // Toggle heading visibility when hamburger is clicked
 
     if (!isNavVisible) {
       // Show navigation with a delay (e.g., 500 milliseconds)
