@@ -234,7 +234,10 @@ img {
   }
 
   h1 {
-    font-size: 3.5rem;
+    width: 100%;
+    display: inline;
+    border-top: 5px solid white;
+    font-size: 2.35rem;
     margin-bottom: 1rem;
     margin-top: 0;
   }
@@ -264,6 +267,24 @@ img {
 
   .main-article:hover .main-headline {
     color: #6653ff;
+  }
+
+  .sub-article:hover .headline {
+    color: #6653ff;
+  }
+
+  .sub-article:hover .headline ~ p {
+    color: #6653ff;
+  }
+
+  .main-article-container:last-of-type {
+    margin-bottom: 3rem;
+  }
+
+  .sub-article {
+    border-top: 1px solid rgba(136, 136, 136, 0.54);
+    padding-top: 1.5rem;
+    margin-bottom: 3rem;
   }
 
   .sub-article img {
@@ -349,6 +370,15 @@ img {
   .container {
     background: white;
     color: black;
+  }
+
+  h1 {
+    width: 100%;
+    display: inline;
+    border-top: none;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
   }
 
   .articles {
