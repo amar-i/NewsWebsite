@@ -230,7 +230,7 @@ img {
 
   .main-article img {
     object-fit: cover;
-    margin-left: auto;
+    padding-bottom: 1rem;
   }
 
   .sub-article {
@@ -268,6 +268,7 @@ img {
   }
 
   .line {
+    width: 20%;
     border-top: 0.7rem solid rgb(255, 255, 255);
   }
 
@@ -284,21 +285,17 @@ img {
   }
 }
 
-@media (max-width: 768px) {
-  /* .menu ul {
-    flex-direction: column;
-    top: 0;
-    left: -100vw;
+@media (min-width: 1200px) {
+  .articles {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
   }
 
-  .menu li {
-    height: 20vh;
-    width: 100vw;
+  .sub {
+    width: 45%;
   }
-
-  .menu.open li {
-    transform: translateX(100vw);
-  } */
 }
 
 /* Mobile Landscape */
@@ -313,21 +310,102 @@ img {
     color: white;
   }
 
+  .main-article-container:nth-child(even) .main-article {
+    flex-direction: row-reverse;
+  }
+
   .main-article {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    height: 100%;
+    gap: 1rem;
+    padding-bottom: 1rem;
   }
 
   .main-article img {
-    width: 30%;
+    width: 100%;
     height: 290px;
     object-fit: cover;
-    margin-left: auto;
+  }
+
+  .main-article .description {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .line {
+    border: solid 3px white;
+    width: 20%;
+  }
+
+  .sub-article {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .sub-article .sub-article-description {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
   }
 }
 
+@media (min-width: 300px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: black;
+    padding: 1.5rem;
+    color: white;
+  }
+
+  .main-article-container:nth-child(even) .main-article {
+    flex-direction: row-reverse;
+  }
+
+  .main-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .main-article img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+  }
+
+  .main-article .description {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .sub-article img {
+    height: 200px;
+    width: 60%;
+    object-fit: cover;
+    padding-bottom: 1.5rem;
+  }
+
+  .sub-article .sub-article-description {
+    font-size: 0.8rem;
+  }
+
+  .line {
+    border: solid 3px white;
+    width: 20%;
+  }
+}
 /* navbar */
 
 .menu ul {
