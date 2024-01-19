@@ -338,6 +338,11 @@ p {
     color: var(--author-colour);
   }
 
+  h1[title="Main stories of Today!"] {
+    text-decoration: underline;
+    text-underline-offset: 0.7rem;
+  }
+
   .container h1 {
     width: 100%;
     display: inline;
