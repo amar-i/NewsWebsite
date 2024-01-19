@@ -166,7 +166,7 @@ a {
 /* Initially hide elements with the .text-visible class */
 .heading.text-visible,
 .heading-author.text-visible {
-  opacity: 5%;
+  opacity: 1%;
 }
 
 /* Add this class to hide the elements */
@@ -217,6 +217,17 @@ transform:translateY(6px) rotate(45deg) ;
 /* ------ Bottom nav bar ------ */
 .bottom-nav {
   padding: 10px;
+  opacity: 0;
+  animation: fadeIn 2.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with opacity 0 (hidden) */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 (visible) */
+  }
 }
 
 .bottom-nav ul {
@@ -273,6 +284,14 @@ p {
 
 .container h1 {
     font-family: var(--heading-font);
+    animation: text 2s 1;
+}
+
+@keyframes text {
+  0% {
+    margin-bottom: -40%;
+  }
+
 }
 /* -- End of Sub Articles -- */
 
