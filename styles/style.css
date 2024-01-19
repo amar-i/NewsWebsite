@@ -49,22 +49,20 @@ header {
   font-family: var(--heading-font);
   font-weight: 800px;
   position: absolute;
-  bottom: 1px;
+  bottom: 40px;
   padding: 1.15rem 1.5rem;
-
   z-index: 10;
-  color: var(--background-clr);
+  color: white;
   font-size: 34px;
   text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.67);
 }
 
 .carousel h3 {
   position: absolute;
-  bottom: -25px;
-  left: 15px;
+  bottom: 6px;
+  left: 24px;
   z-index: 10;
-
-  color: var(--background-clr);
+  color: white;
   font-size: 23px;
 }
 
@@ -283,15 +281,14 @@ p {
 }
 
 .container h1 {
-    font-family: var(--heading-font);
-    animation: text 2s 1;
+  font-family: var(--heading-font);
+  animation: text 2s 1;
 }
 
 @keyframes text {
   0% {
     margin-bottom: -40%;
   }
-
 }
 /* -- End of Sub Articles -- */
 
