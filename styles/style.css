@@ -511,6 +511,7 @@ p {
     background: white;
     color: black;
   }
+
   h1 {
     width: 100%;
     display: inline;
@@ -572,5 +573,23 @@ p {
     display: flex;
     flex-direction: row;
     width: 100%;
+  }
+}
+
+@media (max-width: 1550px) {
+  /* Add an animation to the container's background color */
+  .container {
+    background-color: white; /* Start with white background */
+    animation: fadeToBlack 0.3s ease-in forwards; /* Animation properties */
+  }
+
+  /* Define the keyframes for the fade animation */
+  @keyframes fadeToBlack {
+    from {
+      background-color: white; /* Start with white */
+    }
+    to {
+      background-color: black; /* End with black */
+    }
   }
 }
