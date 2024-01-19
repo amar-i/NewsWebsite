@@ -395,7 +395,7 @@ p {
 
   .sub-article img {
     height: 200px;
-    width: 60%;
+    width: 800px;
     object-fit: cover;
     padding-bottom: 1.5rem;
   }
