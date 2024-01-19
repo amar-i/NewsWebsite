@@ -505,10 +505,12 @@ p {
   .wrapper {
     max-width: 1550px;
     background: white;
+    animation: fadeToWhite 0.3s ease-in forwards;
   }
 
   .container {
     background: white;
+    animation: fadeToWhite 0.3s ease-in forwards;
     color: black;
   }
 
@@ -591,5 +593,14 @@ p {
     to {
       background-color: black; /* End with black */
     }
+  }
+}
+
+@keyframes fadeToWhite {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: white;
   }
 }
